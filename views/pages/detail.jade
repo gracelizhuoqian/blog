@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      .col-md-7
+        embed(src="#{movie.poster}",allowFullScreen="true",quality="hign",width="720",height="600",align="middle",type="application/x-shockwave-flash")
+      .col-md-5
+        dl.dl-horizontal
+          dt 电影名字
+          dd=movie.title
+          dt 电影导演
+          dd=movie.doctor
+          dt 片源地址
+          dd: a(target="_blank",href=movie.flash) 看看
+          dt 上映时间
+          dd=movie.year
+          dt 电影评分
+          dd=movie.score
+          dt 电影类型
+          dd=movie.genres
